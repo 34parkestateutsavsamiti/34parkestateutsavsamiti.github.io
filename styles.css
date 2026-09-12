@@ -354,6 +354,17 @@ footer h2 {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
+
+
+.sponsor-card1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
 .sponsor-trigger {
   position: relative;
   overflow: hidden;
@@ -402,7 +413,7 @@ footer h2 {
 }
 
 .sponsor-card img:not(.payment-qr) {
-  width: 200px;
+  width: 300px;
   object-fit: contain;
   border-radius: 10px;
 }
@@ -416,7 +427,7 @@ footer h2 {
 
 /* Payment QR */
 .payment-qr {
-  width: 180px;
+  width: 250px;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
@@ -591,4 +602,696 @@ footer h2 {
     width: 36px;
     height: 36px;
   }
+}
+
+
+/* =========================================================
+   ENHANCED GANPATI FEATURES
+========================================================= */
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 900px;
+  margin: 35px auto 0;
+}
+
+.countdown-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 26px 16px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(70, 25, 8, 0.12);
+  border: 1px solid rgba(166, 57, 22, 0.12);
+}
+
+.countdown-number {
+  display: block;
+  font-family: "Telegraf", Georgia, serif;
+  font-size: clamp(2.3rem, 6vw, 4.4rem);
+  line-height: 1;
+  color: var(--primary);
+}
+
+.countdown-label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+color: var(--primary);
+}
+
+.festival-days {
+  margin: 28px auto 0;
+  width: fit-content;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: rgba(216, 78, 24, 0.1);
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.festival-days-number {
+  font-family: "Telegraf", Georgia, serif;
+  font-size: 1.3rem;
+  margin-right: 5px;
+}
+
+.daily-flow {
+  position: relative;
+  max-width: 980px;
+  margin: 45px auto 0;
+}
+
+.daily-flow::before {
+  content: "";
+  position: absolute;
+  left: 78px;
+  top: 20px;
+  bottom: 20px;
+  width: 3px;
+  background: rgba(216, 78, 24, 0.18);
+}
+
+.daily-event {
+  position: relative;
+  display: grid;
+  grid-template-columns: 155px 1fr;
+  gap: 28px;
+  margin-bottom: 22px;
+  padding: 12px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(70, 25, 8, 0.08);
+  border: 2px solid transparent;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.daily-event:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(70, 25, 8, 0.12);
+}
+
+.daily-event.today {
+  border-color: var(--primary);
+  box-shadow: 0 14px 34px rgba(216, 78, 24, 0.2);
+}
+
+.daily-event-date {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 110px;
+  border-radius: 16px;
+  background: var(--cream);
+  color: var(--secondary);
+}
+
+.daily-event-date span {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.daily-event-date strong {
+  margin-top: 8px;
+  font-family: "Telegraf", Georgia, serif;
+  font-size: 1.2rem;
+}
+
+.daily-event-date small {
+  margin-top: 2px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.daily-event-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.daily-event-content h3 {
+  color: var(--secondary);
+  font-size: 1.45rem;
+}
+
+.daily-event-content p {
+  margin-top: 7px;
+}
+
+.event-time {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.event-venue {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.event-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.completed-badge {
+  background: #6b2e0e;
+  opacity: 0.65;
+}
+
+.music-player {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  gap: 30px;
+  align-items: center;
+  background: #fff;
+  padding: 26px;
+  border-radius: 24px;
+  box-shadow: 0 14px 34px rgba(70, 25, 8, 0.12);
+}
+
+.youtube-player {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #180b06;
+}
+
+.youtube-player iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.music-info h3 {
+  color: var(--secondary);
+  font-size: 1.7rem;
+}
+
+.music-info .btn {
+  margin-top: 16px;
+}
+
+@media (max-width: 700px) {
+  .countdown-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .daily-flow::before {
+    display: none;
+  }
+
+  .daily-event {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .daily-event-date {
+    min-height: auto;
+    padding: 15px;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .daily-event-date strong {
+    margin-top: 0;
+  }
+
+  .music-player {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* =========================================================
+   REQUESTED UTSAV ENHANCEMENTS
+========================================================= */
+
+/* Floating background music control */
+.background-youtube {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  left: -10px;
+  bottom: -10px;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.background-youtube iframe {
+  width: 1px;
+  height: 1px;
+  border: 0;
+}
+
+.music-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.music-toggle {
+  width: 48px;
+  height: 48px;
+  border: 2px solid rgba(255,255,255,0.75);
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(70,25,8,0.28);
+}
+
+.music-toggle:hover,
+.music-toggle:focus-visible {
+  transform: scale(1.06);
+  outline: none;
+}
+
+.music-label {
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(107,46,14,0.9);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* Event POC and day dividers */
+.event-day-divider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 32px 0 12px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--secondary);
+  color: #fff;
+  font-weight: 800;
+}
+
+.event-day-divider span {
+  letter-spacing: 0.08em;
+}
+
+.event-poc {
+  display: block;
+  margin-top: 10px;
+  color: var(--secondary);
+  font-weight: 800;
+}
+
+/* Contacts */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 35px;
+}
+
+.contact-card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(70,25,8,0.08);
+  text-align: center;
+}
+
+.contact-icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact-card h3 {
+  color: var(--secondary);
+}
+
+.contact-card strong {
+  display: block;
+  margin-top: 12px;
+  color: var(--primary);
+}
+
+/* Utsav Moments carousel */
+.moments-carousel {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) 52px;
+  gap: 16px;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(70,25,8,0.14);
+}
+
+.carousel-track {
+  position: relative;
+  min-height: 470px;
+}
+
+.moment-slide {
+  display: none;
+  margin: 0;
+}
+
+.moment-slide.is-active {
+  display: block;
+}
+
+.moment-slide img {
+  display: block;
+  width: 100%;
+  height: min(62vh, 560px);
+  object-fit: cover;
+}
+
+.moment-slide figcaption {
+  padding: 14px 18px;
+  text-align: center;
+  font-weight: 800;
+  color: var(--secondary);
+}
+
+.carousel-control {
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--secondary);
+  color: #fff;
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.carousel-control:hover,
+.carousel-control:focus-visible {
+  background: var(--primary);
+  outline: none;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.carousel-dot {
+  width: 11px;
+  height: 11px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(166,57,22,0.28);
+  cursor: pointer;
+  padding: 0;
+}
+
+.carousel-dot.is-active {
+  width: 30px;
+  border-radius: 999px;
+  background: var(--primary);
+}
+
+/* Social media presence */
+.social-presence {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 320px));
+  justify-content: center;
+  gap: 24px;
+  margin-top: 35px;
+}
+
+.social-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 5px 5px;
+  border-radius: 18px;
+  background: #fff;
+  color: var(--secondary);
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(70,25,8,0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.social-card span {
+  font-size: 2rem;
+}
+
+.social-card strong {
+  font-family: "Telegraf", Georgia, serif;
+  font-size: 1.25rem;
+}
+
+.social-card small {
+  opacity: 0.75;
+  font-weight: 700;
+}
+
+.social-card:hover,
+.social-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(70,25,8,0.14);
+  outline: none;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-presence {
+    grid-template-columns: 1fr;
+  }
+
+  .moments-carousel {
+    grid-template-columns: 40px minmax(0,1fr) 40px;
+    gap: 8px;
+  }
+
+  .carousel-control {
+    width: 38px;
+    height: 38px;
+    font-size: 1.8rem;
+  }
+
+  .carousel-track {
+    min-height: 200px;
+  }
+
+  .moment-slide img {
+    height: 55vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .music-label {
+    display: none;
+  }
+
+  .music-float {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .daily-event {
+    grid-template-columns: 1fr;
+  }
+
+  .event-day-divider {
+    font-size: 0.85rem;
+  }
+}
+
+/* Countdown merged directly into the hero */
+.hero .hero-content {
+  max-width: 980px;
+  width: 100%;
+}
+
+.hero-countdown {
+  margin-top: 30px;
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(32, 12, 5, 0.48);
+  border: 1px solid rgba(255, 245, 218, 0.28);
+  backdrop-filter: blur(5px);
+}
+
+.hero-countdown-heading {
+  text-align: center;
+}
+
+.hero-countdown-heading .tag {
+  background: rgba(255, 245, 218, 0.16);
+}
+
+.hero-countdown-heading h2 {
+  color: #fff;
+  margin: 14px 0 6px;
+  font-family: "Telegraf", Georgia, serif;
+}
+
+.hero-countdown-heading p {
+  color: rgba(255,255,255,.9);
+  margin: 0;
+}
+
+.hero .countdown-grid {
+  margin: 22px auto 0;
+  max-width: 900px;
+}
+
+.hero .countdown-card {
+  background: rgba(255, 250, 235, 0.96);
+  padding: 20px 12px;
+}
+
+.hero .festival-days {
+  margin-top: 18px;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: auto;
+    padding: 55px 0 60px;
+  }
+
+  .hero-countdown {
+    padding: 16px;
+    margin-top: 24px;
+  }
+
+  .hero .countdown-grid {
+    gap: 10px;
+  }
+
+  .hero .countdown-card {
+    padding: 16px 8px;
+  }
+
+  .hero .countdown-number {
+    font-size: 2.2rem;
+  }
+}
+
+
+.map-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+}
+
+
+
+.whatsapp-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+}
+
+.contact-person {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    background: transparent;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.whatsapp-icon {
+    height: 45px;
+    display: block;
+}
+
+
+
+
+.container123 {
+  display: flex; /* Aligns items horizontally */
+  width: 100%;   /* Spans full width of the screen */
+}
+
+.box123 {
+  flex: 1;       /* Distributes space equally (50% each) */
+  padding: 20px; /* Optional spacing inside the boxes */
+}
+
+
+
+
+/* Base styling for the image */
+.zoomable-img {
+  width: 300px;              /* Set your standard default width */
+  transition: transform 0.3s ease; /* Smooth transition animation */
+  cursor: zoom-in;           /* Changes cursor to a magnifying glass */
+}
+
+/* Styling applied when clicked */
+.zoomable-img.zoomed {
+  transform: scale(2);       /* Zooms the image to 2x its size */
+  cursor: zoom-out;          /* Changes cursor to a zoom-out glass */
+  z-index: 10;               /* Ensures the image stays on top of other content */
+  position: relative;        /* Required for z-index to function */
 }
