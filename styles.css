@@ -1271,6 +1271,7 @@ color: var(--primary);
 .container123 {
   display: flex; /* Aligns items horizontally */
   width: 100%;   /* Spans full width of the screen */
+  flex-wrap: wrap; 
 }
 
 .box123 {
